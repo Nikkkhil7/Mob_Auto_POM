@@ -9,9 +9,8 @@ class ProductPage(BasePage):
 
     def open_product(self):
         self.click(self.locator.get("product", "product_name"))
-        time.sleep(6)  # Adidas Compose UI load
+        time.sleep(6)  
 
     def add_to_bag(self):
-        # 🔥 EXACT WORKING SCROLL
         self.driver.find_element(*self.locator.get("product", "scroll_add_to_bag"))
         self.click(self.locator.get("product", "add_to_bag"))
